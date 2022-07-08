@@ -1,0 +1,9 @@
+body{
+    background-color: aqua;
+}
+
+.login {
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+}
