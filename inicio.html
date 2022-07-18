@@ -7,8 +7,90 @@
     <title>Inicio</title>
     <link rel="shortcut icon" href="images/iconoIndex.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
-</head>
-<body>
-    Inicio
+    <link rel="stylesheet" href="styles/inicio.css">
+    </head>
+    <body>
+        <h1>Lista de cuentas</h1>
+    <header>
+        <article>
+            <div>Nombre</div>
+            <div>Cantidad</div>
+        </article>
+        <article>
+            <div>Nombre</div>
+            <div>Cantidad</div>
+        </article>
+        <article>
+            <div>Nombre</div>
+            <div>Cantidad</div>
+        </article>
+        <section id="menu">
+            <ul id="menu-pri">
+                <li><a href="">Modificar cuentas</a>
+                    <ul>
+                        <li><a href="">Agregar</a></li>
+                        <li><a href="">Modificar</a></li>
+                        <li><a href="">Eliminar</a></li>
+                    </ul>
+                </li>
+            </ul> 
+            </section>
+    </header>
+    <section>
+        <!-- DONUT CHART BLOCK (LEFT-CONTAINER) --> 
+    <div class="donut-chart-block block"> 
+        <h1 class="titular">Grafica de gastos</h1>
+        <div class="donut-chart">
+<!-- PORCIONES GRAFICO CIRCULAR
+ELIMINADO #donut-chart
+MODIFICADO CSS de .donut-chart -->
+<div id="porcion1" class="recorte"><div class="quesito ios" data-rel="41"></div></div>
+<div id="porcion2" class="recorte"><div class="quesito mac" data-rel="19"></div></div>
+<div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+<div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+<!-- FIN AÑADIDO GRÄFICO -->
+                <p class="center-date">Total gastos<br><span class="scnd-font-color">$2130000</span></p>        
+        </div>
+        <ul class="os-percentages horizontal-list">
+            <li>
+                <p class="ios os scnd-font-color">Comida</p>
+                <p class="os-percentage">41<sup>%</sup></p>
+            </li>
+            <li>
+                <p class="mac os scnd-font-color">Arriendo</p>
+                <p class="os-percentage">19<sup>%</sup></p>
+            </li>
+            <li>
+                <p class="linux os scnd-font-color">Servicios</p>
+                <p class="os-percentage">9<sup>%</sup></p>
+            </li>
+            <li>
+                <p class="win os scnd-font-color">Gasolina</p>
+                <p class="os-percentage">31<sup>%</sup></p>
+            </li>
+        </ul>
+    </div>
+    </section>
+    <aside>
+        <h1>Resumen de gastos</h1>
+        <div class="gastos">
+            <div class="gasto">
+                <div>Tipo de Gasto</div>
+                <div>Valor...</div>
+            </div>
+            <div class="gasto">
+                <div>Tipo de Gasto</div>
+                <div>Valor...</div>
+            </div>
+            <div class="gasto">
+                <div>Tipo de Gasto</div>
+                <div>Valor...</div>
+            </div>
+            <div class="gasto">
+                <div>Tipo de Gasto</div>
+                <div>Valor...</div>
+            </div>
+        </div>
+    </aside>
 </body>
 </html>
