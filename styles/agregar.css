@@ -55,3 +55,7 @@ button {
 .volver {
     align-self: flex-start;
 }
+
+.boton:hover {
+    background-color: #d49100;
+}

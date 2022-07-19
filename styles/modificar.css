@@ -68,6 +68,10 @@ a {
     height: 1.5em;
 }
 
+.boton:hover {
+    background-color: #d49100;
+}
+
 .invisible {
         background: transparent;
         border: none;

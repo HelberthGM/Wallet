@@ -56,3 +56,7 @@ img {
 input {
     margin-left: 1em;
 }
+
+#boton:hover {
+    background-color: #e69d00;
+}
