@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/fondoNuevoUs.jpg");
+    background-image: url("../images/fondoAgregar.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -10,45 +10,48 @@ body{
     justify-content:center;
 }
 
-#contenedor {    
-    height: 100vh;    
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
-  }
-
-.login {
-    width: 35vw;
     text-align: center;
-    display: block;
     margin: 20vh 0 0 0;
     border: 2px solid rgb(255 175 60);
     background-color: rgba(255, 255, 255, 0.664);
+    width: 30vw;
+    height: 50vh;
 }
 
-img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    /* margin: auto;*/
+input {
+    margin-left: 1vw;
 }
 
-#logo {
-    height: 10em;
-    margin: 1em;
+h1 {
+    color: #FFAE00;
+    margin-bottom: 1.5em;
 }
 
-#boton {
-    margin: 1em;
+.boton {
+    margin: 1vh;
     text-decoration: none;
     background-color: #FFAE00;
     color: white;
-    padding: 0.5em 2em;
+    padding: 0.5vh 2vw;
     border: none;
     border-radius: 6px;
 }
 
-input {
-    margin-left: 1em;
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.volver {
+    align-self: flex-start;
 }

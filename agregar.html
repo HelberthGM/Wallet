@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="styles/agregar.css">
 </head>
 <body>
+    <a href="inicio.html" class="boton volver" >Volver</a>
     <section>
         <h1>Informacion cuenta</h1>
         <form action="inicio.html">
-        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." ></p></div>
-        <div id="valor"><p> Valor de cuenta:<input type="text" placeholder="Valor de cuenta..." ></p></div>
+        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." required></p></div>
+        <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." required></p></div>
         <div id="color"><p> Color:<input type="color" required></p></div>
         <div class="boton">
             <button type="submit" id="boton">Guardar cambios</button>
