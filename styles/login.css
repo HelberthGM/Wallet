@@ -55,6 +55,8 @@ img {
 
 input {
     margin-left: 1em;
+    border-radius: 4px;
+    border-style: none;
 }
 
 #boton:hover {

@@ -20,6 +20,7 @@ ul {
 
 h1 {
   font-size: 23px;
+  margin-left: 1vw;
 }
 
 h2 {
@@ -191,7 +192,7 @@ article {
               border-top: 4px solid #11a8ab;
             }
             .os.linux {
-              border-top: 4px solid #fcb150;
+              border-top: 4px solid #d67900;
             }
             .os.win {
               border-top: 4px solid #4fc4f6;
@@ -320,7 +321,7 @@ p.center-date {
     transform:rotate(-32deg);
   }
 #porcionFin .quesito {
-    background-color: #FCB150;
+    background-color: #d67900;
     transform: rotate(32deg);
   }
 .nota-final {
@@ -333,7 +334,7 @@ p.center-date {
   color: #E64C65;
 }
 .nota-final a {
-  color: #FCB150;
+  color: #d67900;
   font-size: inherit;
 }
 
@@ -355,4 +356,36 @@ aside {
     padding: 1em;
     border: 4px solid white;
     margin: 0.4em;
+}
+
+.letra {
+  font-weight: bolder;
+}
+
+#gasolina {
+  border-color: #4FC4F6;
+}
+
+#servicios {
+  border-color: #d67900;
+}
+
+#arriendo {
+  border-color: #11a8ab;
+}
+
+#comida {
+  border-color: #E64C65;
+}
+
+#ahorro {
+  border-color: #ff002b;
+}
+
+#efectivo {
+  border-color: #4ce666;
+}
+
+#credito {
+  border-color: #684ce6;
 }

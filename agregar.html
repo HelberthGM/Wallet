@@ -16,6 +16,13 @@
         <form action="inicio.html">
         <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." required></p></div>
         <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." required></p></div>
+        <div id="tipo">
+            <label for="tipos">Tipo de cuenta:</label>
+             <select id="tipos" name="tipos">
+             <option value="cuenta">Cuenta</option>
+             <option value="gasto">Gasto</option>
+           </select>
+        </div>
         <div id="color"><p> Color:<input type="color" required></p></div>
         <div class="boton">
             <button type="submit" id="boton">Guardar cambios</button>
