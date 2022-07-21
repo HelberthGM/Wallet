@@ -79,3 +79,12 @@ a {
         height: 100%;
         color: #e5ff00;
 }
+
+h2 {
+    font-size: 3em;
+}
+/***** Sweet alert *****/
+.desdeSwal {
+    color: black;
+    text-decoration: underline;
+}
