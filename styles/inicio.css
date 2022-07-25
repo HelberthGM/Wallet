@@ -394,8 +394,10 @@ aside {
   font-size: 65%;
 }
 
-/* Grafica linear */
-#char {
-   width: 400!important;
-  height: 400!important;
+/* Grafica lineal */
+
+#areaGraf {
+  width: 90%!important;
+  height: 10%!important;
+  margin-left: 5%;
 }
