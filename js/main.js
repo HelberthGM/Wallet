@@ -1,5 +1,5 @@
 function confirmarElim() {
-      Swal.fire({
+      swal.fire({
         title: "Cuenta #123465",
         text: "¿Eliminar?",
         icon: 'warning',
@@ -9,7 +9,7 @@ function confirmarElim() {
         allowOutsideClick: false
     }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire({
+          swal.fire({
             html: `<h2>Cuenta eliminada</h2>
             <p>Cuenta con el nombre <strong>ejemplo</strong> a sido eliminada</p>
             <br>
@@ -21,9 +21,9 @@ function confirmarElim() {
 }
 
 function confirmGuard() {
-  if (validaNombre() && validaValor()) {
+  if (document.formulario.cuenta.value.length==0 && document.formulario.valor.value.length==0) {
     console.log('click en cuenta creada....');
-  Swal.fire({
+  swal.fire({
     html: `<h1>Cuenta creada</h1>
     <p>Se ha eviado un correo de confirmación</p>
     <br>
@@ -35,32 +35,4 @@ this.submit();
   }else{
     console.log('Los datos del form no estan completos')
   } 
-}
-
-function validaNombre() {
-  if (document.formulario.cuenta.value.length==0){
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Ingrese el nombre de su cuenta',
-    })
-    document.formulario.cuenta.focus()
-    return 0;
-}else{
-  return true;
-}
-}
-
-function validaValor() {
-  if (document.formulario.valor.value.length==0){
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Ingrese el valor de su cuenta',
-    })
-    document.formulario.valor.focus()
-    return 0;
-}else{
-  return true;
-}
 }
