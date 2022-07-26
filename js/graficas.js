@@ -25,7 +25,7 @@ const myChart = new Chart(ctx, {
             data: [300000, 120000, 100000, 50000, 520000, 750000,700000],
             backgroundColor:  [
                 'rgb(54, 162, 235)',
-                'rgb(203, 25, 10)',
+                'rgba(203, 25, 10,0.7)',
                 'rgb(255, 99, 132)',
                 'rgb(255, 206, 86)',
                 'rgb(118, 247, 5)',
@@ -33,7 +33,7 @@ const myChart = new Chart(ctx, {
                 'rgb(118, 247, 5)',
                 
             ],
-            borderColor:'rgb(203, 25, 10)',
+            borderColor:'rgba(203, 25, 10,0.6)',
           }
       
     ]
@@ -70,7 +70,6 @@ const myChart1 = new Chart(ctx1, {
                 'rgba(153, 102, 255,0.8)',
                 'rgba( 243, 156, 18 ,0.8)',
             ],
-            //borderColor: 'rgb(153, 102, 255)',
             borderWidth: 1
         },
     ]
