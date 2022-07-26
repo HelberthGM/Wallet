@@ -395,9 +395,10 @@ aside {
 }
 
 /* Grafica lineal */
-
+.graficas {
+  display: flex;
+  width: 98vw;
+}
 #areaGraf {
-  width: 90%!important;
-  height: 10%!important;
-  margin-left: 5%;
+  margin: 2% 0 0 1%;
 }

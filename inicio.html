@@ -92,11 +92,14 @@ MODIFICADO CSS de .donut-chart -->
             </div>
         </div>
     </aside>
-
-        <a href="ejGrafica.html">Ejemplo grafica linear</a>
-        <div id="areaGraf">
-        <canvas style="background-color: white" width="1" height="1" id="myChart"></canvas>
+    <div class="graficas">
+        <div id="areaGraf" style="position: relative; height:52vh; width:49vw">
+        <canvas id="myChart" style="background-color: white" ></canvas>
         </div>
-    <script src="js/graficaLinear.js"></script>
+        <div id="areaGraf" style="position: relative; height:52vh; width:49vw" id="borde">
+            <canvas id="myChart1" style="background-color: white"  ></canvas>
+            </div>
+    </div>
+    <script src="js/graficas.js"></script>
 </body>
 </html>
