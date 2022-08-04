@@ -13,18 +13,18 @@
     <a href="inicio.html" class="boton volver" >Volver</a>
     <section>
         <h1>Informacion de la cuenta</h1>
-        <form action="inicio.html">
-        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." required></p></div>
-        <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." required></p></div>
+        <form action="inicio.html" met>
+        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." name="txtNomCuenta" required></p></div>
+        <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." name="txtVlrCuenta" required></p></div>
         <div id="tipo">
             <label for="tipos">Tipo de cuenta:</label>
-             <select id="tipos" name="tipos">
+             <select id="tipos" name="cbxTipos">
              <option value="cuenta">Cuenta</option>
              <option value="gasto">Gasto</option>
              <option value="ingreso">Ingreso</option>
            </select>
         </div>
-        <div id="color"><p> Color:<input type="color" required></p></div>
+        <div id="color" name="inptColor" ><p> Color:<input type="color" required></p></div>
         <div class="boton">
             <button type="submit" id="boton">Guardar cambios</button>
         </div>
