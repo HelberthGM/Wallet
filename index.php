@@ -1,27 +1,29 @@
 <?php
 
     require "conexion.php";
+
+
     if ($_POST) {
-        $txtUsuario = $_POST['txtUsuario'];
+        $nombre_usuario = $_POST['nombre_usuario'];
         $txtContrasena = $_POST['txtContrasena'];
-        $sql = 'SELECT id_usuario, nombre_usuario, correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario=$txtUsuario';
-        $resultado = $mysqli->query($sql);
+        $sql = "SELECT id_usuario, nombre_usuario, correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario='$nombre_usuario'";
+        $resultado = $conexion->query($sql);
         $num = $resultado->num_rows;
 
         if ($num>0) {
             $row = $resultado->fetch_assoc();
             $password_bd = $row['txtContrasena'];
-            $pass_c = sha1($txtContrasena);
+            //$pass_c = sha1($txtContrasena);
 
-            if ($password_bd == $pass_c) {
+            if ($password_bd == $txtContrasena) {
                 
                 $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
                 $_SESSION['id_usuario'] = $row['id_usuario'];
                 $_SESSION['correo'] = $row['correo'];
                 $_SESSION['numero_cuentas'] = $row['numero_cuentas'];
-                header("Location: principal.php");
+                //header("Location: inicio.php");
             }else{
-                echo "la contraseña no coincide";
+                echo "la contraseña no coincide, $password_bd != $txtContrasena ";
             }
         }else {
             echo "No existe el usuario";
@@ -45,19 +47,20 @@
             <img src="images/Logo.webp" alt="logo">
         </div>
         <p>¡Bienvenido/a!</p>
-        <form action="inicio.html" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+         <!-- action="inicio.html"-->
+       <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
         <div id="usuario">
-           <p>Usuario:<input type="text" placeholder="Nombre de usuario..." name="txtUsuario" required></p>
+           <p>Usuario:<input type="text" placeholder="Nombre de usuario..." name="nombre_usuario" required></p>
         </div>
         <div id="contraseña">
-           <p>Contraseña:<input type="password" name="contraseña" id="contraseña" name="txtContrasena" placeholder="Contraseña..." required></p>
+           <p>Contraseña:<input type="password" id="contraseña" name="txtContrasena" placeholder="Contraseña..." required></p>
         </div>
         
             <div class="boton">
-                <button type="submit" id="boton">Iniciar sesión</button>
+                <button type="submit" id="boton" name="submit">Iniciar sesión</button>
             </div>
           </form>
     </section>
-    <a href="nuevoUs.html" id="boton">Crear cuenta</a>
+    <a href="nuevoUs.php" id="boton" >Crear cuenta</a>
 </body>
 </html>

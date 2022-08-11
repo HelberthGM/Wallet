@@ -68,3 +68,14 @@ input {
     padding: 0.5em;
     margin: 1vh;
 }
+
+h3 {
+    color: white;
+    margin-bottom: 1vh;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
