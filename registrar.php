@@ -13,7 +13,7 @@ if (isset($_POST['registro'])) {
         $contrasena = trim($_POST['contrasena']);
 
         $consulta = "INSERT INTO `tb_usuario`(`nombre_usuario`, `correo`, `contrasena`, `numero_cuentas`)
-        VALUES ('$nombre','$email','$contrasena',0)";
+        VALUES ('$nombre','$email',SHA1('$contrasena'),0)";
         $resultado = mysqli_query($conexion, $consulta);
         if ($resultado) {
            ?>

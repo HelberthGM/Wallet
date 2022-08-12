@@ -6,27 +6,28 @@
     if ($_POST) {
         $nombre_usuario = $_POST['nombre_usuario'];
         $txtContrasena = $_POST['txtContrasena'];
-        $sql = "SELECT id_usuario, nombre_usuario, correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario='$nombre_usuario'";
+        $sql = "SELECT id_usuario, nombre_usuario, contrasena,correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario='$nombre_usuario'";
         $resultado = $conexion->query($sql);
         $num = $resultado->num_rows;
 
         if ($num>0) {
             $row = $resultado->fetch_assoc();
-            $password_bd = $row['txtContrasena'];
-            //$pass_c = sha1($txtContrasena);
+            $password_bd = $row['contrasena'];
+            $pass_c = sha1($txtContrasena);
 
-            if ($password_bd == $txtContrasena) {
+            if ($password_bd == $pass_c) {
                 
                 $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
                 $_SESSION['id_usuario'] = $row['id_usuario'];
                 $_SESSION['correo'] = $row['correo'];
                 $_SESSION['numero_cuentas'] = $row['numero_cuentas'];
-                //header("Location: inicio.php");
+                header("Location: ./inicio.html");
             }else{
-                echo "la contraseña no coincide, $password_bd != $txtContrasena ";
+                echo '<script language="javascript">alert("Error, Contraseña incorrecta, por favor intente de nuevo");</script>';
+                //echo "la contraseña no coincide, $password_bd != $txtContrasena ";
             }
         }else {
-            echo "No existe el usuario";
+            echo '<script language="javascript">alert("Error, El usuario no esta registrado");"</script>';
         }
     }
 ?>
