@@ -2,6 +2,7 @@
 
     require "conexion.php";
 
+    session_start();
 
     if ($_POST) {
         $nombre_usuario = $_POST['nombre_usuario'];
@@ -21,13 +22,13 @@
                 $_SESSION['id_usuario'] = $row['id_usuario'];
                 $_SESSION['correo'] = $row['correo'];
                 $_SESSION['numero_cuentas'] = $row['numero_cuentas'];
-                header("Location: ./inicio.html");
+                header("Location: ./inicio.php");
             }else{
                 echo '<script language="javascript">alert("Error, Contraseña incorrecta, por favor intente de nuevo");</script>';
                 //echo "la contraseña no coincide, $password_bd != $txtContrasena ";
             }
         }else {
-            echo '<script language="javascript">alert("Error, El usuario no esta registrado");"</script>';
+            echo '<script language="javascript">alert("Error, El usuario no esta registrado");</script>';
         }
     }
 ?>
