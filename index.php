@@ -1,36 +1,6 @@
 <?php
-
     require "conexion.php";
-
     session_start();
-
-    if ($_POST) {
-        $nombre_usuario = $_POST['nombre_usuario'];
-        $txtContrasena = $_POST['txtContrasena'];
-        $sql = "SELECT id_usuario, nombre_usuario, contrasena,correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario='$nombre_usuario'";
-        $resultado = $conexion->query($sql);
-        $num = $resultado->num_rows;
-
-        if ($num>0) {
-            $row = $resultado->fetch_assoc();
-            $password_bd = $row['contrasena'];
-            $pass_c = sha1($txtContrasena);
-
-            if ($password_bd == $pass_c) {
-                
-                $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
-                $_SESSION['id_usuario'] = $row['id_usuario'];
-                $_SESSION['correo'] = $row['correo'];
-                $_SESSION['numero_cuentas'] = $row['numero_cuentas'];
-                header("Location: ./inicio.php");
-            }else{
-                echo '<script language="javascript">alert("Error, Contraseña incorrecta, por favor intente de nuevo");</script>';
-                //echo "la contraseña no coincide, $password_bd != $txtContrasena ";
-            }
-        }else {
-            echo '<script language="javascript">alert("Error, El usuario no esta registrado");</script>';
-        }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,6 +19,34 @@
             <img src="images/Logo.webp" alt="logo">
         </div>
         <p>¡Bienvenido/a!</p>
+        <?php 
+        if ($_POST) {
+            $nombre_usuario = $_POST['nombre_usuario'];
+            $txtContrasena = $_POST['txtContrasena'];
+            $sql = "SELECT id_usuario, nombre_usuario, contrasena,correo, numero_cuentas FROM tb_usuario WHERE nombre_usuario='$nombre_usuario'";
+            $resultado = $conexion->query($sql);
+            $num = $resultado->num_rows;
+    
+            if ($num>0) {
+                $row = $resultado->fetch_assoc();
+                $password_bd = $row['contrasena'];
+                $pass_c = sha1($txtContrasena);
+    
+                if ($password_bd == $pass_c) {
+                    
+                    $_SESSION['nombre_usuario'] = $row['nombre_usuario'];
+                    $_SESSION['id_usuario'] = $row['id_usuario'];
+                    $_SESSION['correo'] = $row['correo'];
+                    $_SESSION['numero_cuentas'] = $row['numero_cuentas'];
+                    header("Location: ./inicio.php");
+                }else{
+                    echo "Error, contraseña incorrecta";
+                }
+            }else {
+                echo "Error, el usuario no esta registrado";
+            }
+        }
+            ?>
          <!-- action="inicio.html"-->
        <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> 
         <div id="usuario">

@@ -16,11 +16,11 @@ section {
     align-items: center;
     justify-content:center;
     text-align: center;
-    margin: 20vh 0 0 0;
+    margin: 18vh 0 0 0;
     border: 2px solid rgb(255 175 60);
     background-color: rgba(255, 255, 255, 0.336);
-    width: 30vw;
-    height: 50vh;
+    width: 38vw;
+    height: 53vh;
 }
 
 input {

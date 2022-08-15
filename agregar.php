@@ -34,6 +34,9 @@
              <option value="ingreso">Ingreso</option>
            </select>
         </div>
+        <div>
+            <p>Fecha:<input type="date" name="fecha" id="fecha"></p>
+        </div>
         <div id="color" name="inptColor" ><p> Color:<input type="color" required></p></div>
         <div class="boton">
             <button type="submit" id="boton">Guardar cambios</button>

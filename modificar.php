@@ -29,6 +29,7 @@
             <button type="submit" class="invisible">
                 <div class="nombre">Nombre</div>
                 <div class="valor">$ Valor</div>
+                <div class="fecha">Fecha</div>
                 </button>
                 <div class="boton" onclick="confirmarElim()">
                     <a href="inicio.php" id="eliminar">Eliminar</a>
@@ -39,6 +40,7 @@
             <button type="submit" class="invisible" >
                 <div class="nombre">Nombre</div>
                 <div class="valor">$ Valor</div>
+                <div class="fecha">Fecha</div>
                 </button>
                 <div class="boton" onclick="confirmarElim()">
                     <a href="inicio.php" id="eliminar">Eliminar</a>
@@ -49,6 +51,7 @@
             <button type="submit" class="invisible">
                 <div class="nombre">Nombre</div>
                 <div class="valor">$ Valor</div>
+                <div class="fecha">Fecha</div>
                 </button>
                 <div class="boton" onclick="confirmarElim()">
                     <a href="inicio.php" id="eliminar">Eliminar</a>

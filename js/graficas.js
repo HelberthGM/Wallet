@@ -44,7 +44,8 @@ const myChart = new Chart(ctx, {
                 beginAtZero: true
             },
         }
-    }
+    },
+    
 });
 // Grafica Barras
 const ctx1 = document.getElementById('myChart1').getContext('2d');
