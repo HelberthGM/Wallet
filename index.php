@@ -1,5 +1,5 @@
 <?php
-    require "conexion.php";
+    require "modelo/conexion.php";
     session_start();
 ?>
 <!DOCTYPE html>

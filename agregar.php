@@ -43,5 +43,8 @@
         </div>
         </form>
     </section>
+    <?php
+    include("modelo/agregarCuenta");
+    ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-include("conexion.php");
+include("modelo/conexion.php");
 /*
 if($conex){
     echo "Todo bien, todo correcto";

@@ -33,7 +33,7 @@
           </form>
     </section>
     <?php
-        include("registrar.php");
+        include("modelo/registrar.php");
     ?>
 </body>
 </html>

@@ -44,7 +44,7 @@
                     </ul>
                 </li>
             </ul> 
-            <button id="salir"> <a href="logout.php">Cerrar sesión</a></button>
+            <button id="salir"> <a href="modelo/logout.php">Cerrar sesión</a></button>
             </section>
     </header>
     <section>
