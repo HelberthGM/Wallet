@@ -84,3 +84,29 @@ const myChart1 = new Chart(ctx1, {
         }
     }
 });
+
+// Grafica dona
+const ctxDona = document.getElementById('myChartDona').getContext('2d');
+const myChartDona = new Chart(ctxDona, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Comida',
+            'Arriendo',
+            'Servicios',
+            'Gasolina'
+          ],
+          datasets: [{
+            label: 'Gastos',
+            data: [873300, 404700, 191700,660300],
+            backgroundColor: [
+              'rgb(255, 99, 132)',
+              'rgb(54, 162, 235)',
+              'rgb(255, 205, 86)',
+              'rgb(235, 105, 6)'
+            ],
+            hoverOffset: 4
+          }]
+    },
+
+});

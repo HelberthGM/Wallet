@@ -18,8 +18,8 @@
     <link rel="shortcut icon" href="images/iconoIndex.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/inicio.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.2/chart.js" integrity="sha512-/MqITtqQfmjLnDtBC8yxrsERbn3dvqyxtc1B/3x57xp+J3srVBcgyr9VXgDj8BYScxSJ9MauIMY7F9Fr2TJHkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
     <body>
         <h1>Lista de cuentas - <?php echo $nombre_usuario; ?></h1>
     <header>
@@ -48,40 +48,10 @@
             </section>
     </header>
     <section>
-        <!-- DONUT CHART BLOCK (LEFT-CONTAINER) --> 
-    <div class="donut-chart-block block"> 
-        <h1 class="titular">Grafica de gastos</h1>
-        <div class="donut-chart">
-<!-- PORCIONES GRAFICO CIRCULAR
-ELIMINADO #donut-chart
-MODIFICADO CSS de .donut-chart -->
-<div id="porcion1" class="recorte"><div class="quesito ios" data-rel="41"></div></div>
-<div id="porcion2" class="recorte"><div class="quesito mac" data-rel="19"></div></div>
-<div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
-<div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
-<!-- FIN AÑADIDO GRÄFICO -->
-                <p class="center-date">Total gastos<br><span class="scnd-font-color">$2130000</span></p>        
+        <div id="areaGraf" style="position: relative; height:32vh; width:29vw" >
+                <canvas id="myChartDona" style="background-color: white"></canvas>
         </div>
-        <ul class="os-percentages horizontal-list">
-            <li>
-                <p class="ios os scnd-font-color">Comida</p>
-                <p class="os-percentage">41<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="mac os scnd-font-color">Arriendo</p>
-                <p class="os-percentage">19<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="linux os scnd-font-color">Servicios</p>
-                <p class="os-percentage">9<sup>%</sup></p>
-            </li>
-            <li>
-                <p class="win os scnd-font-color">Gasolina</p>
-                <p class="os-percentage">31<sup>%</sup></p>
-            </li>
-        </ul>
-    </div>
-    </section>
+    
     <aside>
         <h1>Resumen de gastos</h1>
         <div class="gastos">
@@ -103,6 +73,7 @@ MODIFICADO CSS de .donut-chart -->
             </div>
         </div>
     </aside>
+</section>
     <div class="graficas">
         <div id="areaGraf" style="position: relative; height:52vh; width:49vw">
         <canvas id="myChart" style="background-color: white" ></canvas>

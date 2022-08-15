@@ -18,7 +18,7 @@ if (isset($_POST['registro'])) {
         if ($resultado) {
            ?>
            <h3 class='ok' style="color: white;margin-bottom: 1vh;text-decoration: none;">Te has instricto correctamente<br> 
-                <a href="inicio.html" style="text-decoration: none;color: white;">Estrena tu cuenta ¡Click aqui!</a>
+                <a href="inicio.php" style="text-decoration: none;color: white;">Estrena tu cuenta ¡Click aqui!</a>
             </h3>
            <?php
         }else {
