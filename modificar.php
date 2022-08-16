@@ -55,18 +55,19 @@
                         <a href="inicio.php" id="eliminar">Eliminar</a>
                     </div>
                 </form>
+        </div>
                 <?php
             }
-            
-
-
-                
             }else{
-                echo "El usuario '$nombre_usuario' no tiene cuentas.";
+                ?>
+    <div></div>
+    <div></div>
+    <div class="noCuentas">No hay cuentas asociadas al usuario <?php echo $nombre_usuario;?></div>
+    <div></div>
+    <div></div>
+    <?php
             }
         ?>
-
-    </div>
     
     <script src="js/eliminar.js"></script>
 </body>
