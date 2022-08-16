@@ -26,7 +26,8 @@
 <body>
     <nav>
         <div class="devolver"><a href="inicio.php" class="boton atras">Atras</a></div>
-        <h1>Modificar</h1>
+        <h1 class="title">Modificar</h1>
+        <p>Haga click en la cuenta a modificar</p>
     </nav>
     <div class="cuentas">
         <?php 
@@ -54,16 +55,16 @@
                         <a href="inicio.php" id="eliminar">Eliminar</a>
                     </div>
                 </form>
-        </div>
                 <?php
             }
-            }else{
-                ?>
+        }else{
+            ?>
     <div></div>
     <div></div>
     <div class="noCuentas">No hay cuentas asociadas al usuario <?php echo $nombre_usuario;?></div>
     <div></div>
     <div></div>
+</div>
     <?php
             }
         ?>
