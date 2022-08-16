@@ -5,9 +5,8 @@
     if (!isset($_SESSION['id_usuario'])) {
         header("Location: index.php");
     }
-    $nombre_usuario = $_SESSION['nombre_usuario'];
-    $id_usuario = $_SESSION['id_usuario'];
-    $numero_cuentas = $_SESSION['numero_cuentas'];
+    
+    include("modelo/modCuenta.php");
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +25,7 @@
     <section>
         <h1>Informacion de la cuenta</h1>
         <form method="post">
-        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." name="txtNomCuenta" required></p></div>
+        <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." name="txtNomCuenta"  value="ejemplo" required></p></div>
         <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." name="txtVlrCuenta" required></p></div>
         <div id="tipo">
             <label for="tipos">Tipo de cuenta:</label>
@@ -43,8 +42,5 @@
         <button type="submit" class="boton" name="argCuenta">Guardar cambios</button>
         </form>
     </section>
-    <?php
-    include("modelo/agregarCuenta.php");
-    ?>
 </body>
 </html>
