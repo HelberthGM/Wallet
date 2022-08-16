@@ -3,8 +3,10 @@ function confirmarElim() {
 
     if (resultado === true) {
         window.alert('Cuenta eliminada.');
+        return true;
     } else { 
-    window.alert('Se conservan la cuenta.');
+        window.alert('Se conservan la cuenta.');
+        return false;
     }
 }
 // alerta de error
