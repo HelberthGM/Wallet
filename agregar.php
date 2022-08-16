@@ -5,7 +5,9 @@
     if (!isset($_SESSION['id_usuario'])) {
         header("Location: index.php");
     }
-    $nombre_usuario = $_SESSION['nombre_usuario']
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+    $id_usuario = $_SESSION['id_usuario'];
+    $numero_cuentas = $_SESSION['numero_cuentas'];
 
 ?>
 <!DOCTYPE html>
@@ -23,7 +25,7 @@
     <a href="inicio.php" class="boton volver" >Volver</a>
     <section>
         <h1>Informacion de la cuenta</h1>
-        <form action="inicio.php" method="post">
+        <form method="post">
         <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." name="txtNomCuenta" required></p></div>
         <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." name="txtVlrCuenta" required></p></div>
         <div id="tipo">
@@ -37,14 +39,12 @@
         <div>
             <p>Fecha:<input type="date" name="fecha" id="fecha"></p>
         </div>
-        <div id="color" name="inptColor" ><p> Color:<input type="color" required></p></div>
-        <div class="boton">
-            <button type="submit" id="boton">Guardar cambios</button>
-        </div>
+        <p> Color:<input type="color"  name="color" id="color"></p>
+        <button type="submit" class="boton" name="argCuenta">Guardar cambios</button>
         </form>
     </section>
     <?php
-    include("modelo/agregarCuenta");
+    include("modelo/agregarCuenta.php");
     ?>
 </body>
 </html>
