@@ -1,3 +1,4 @@
+
 <?php
 
     session_start();
@@ -5,7 +6,11 @@
     if (!isset($_SESSION['id_usuario'])) {
         header("Location: index.php");
     }
-    $nombre_usuario = $_SESSION['nombre_usuario']
+
+    include("modelo/modCuenta.php");
+
+    $nombre_usuario = $_SESSION['nombre_usuario'];
+    $id_usuario = $_SESSION['id_usuario'];
 
 ?>
 <!DOCTYPE html>
@@ -25,38 +30,42 @@
         <h1>Modificar</h1>
     </nav>
     <div class="cuentas">
-        <form action="agregar.php" class="cuenta">
-            <button type="submit" class="invisible">
-                <div class="nombre">Nombre</div>
-                <div class="valor">$ Valor</div>
-                <div class="fecha">Fecha</div>
-                </button>
-                <div class="boton" onclick="confirmarElim()">
-                    <a href="inicio.php" id="eliminar">Eliminar</a>
-                </div>
-            </form>
+        <?php 
+         if ($num>0) {
+             while ($row = $resultado->fetch_assoc()) {
+                 $id_cuenta = $row['id_cuenta'];
+                 $nombre = $row['nombre'];
+                 $valor = $row['valor'];
+                 $fecha = $row['fecha'];
+                 //echo "id cuenta: '$id_cuenta', nombre: '$nombre', valor: '$valor', ";
+                 ?>
+                 <form action="modificarCuentas.php" class="cuenta" method="get">
+                    <button type="submit" class="invisible">
+                        <div class="nombre"><?php echo $nombre; ?></div>
+                        <div class="valor">$ <?php echo $valor; ?></div>
+                        <div class="fecha"><?php 
+                        if ($fecha == "0000-00-00") {
+                            echo "Sin fecha";
+                        }else{
+                            echo $fecha ;
+                        }
+                        ?></div>
+                    </button>
+                    <div class="boton" onclick="confirmarElim()">
+                        <a href="inicio.php" id="eliminar">Eliminar</a>
+                    </div>
+                </form>
+                <?php
+            }
+            
 
-        <form action="agregar.php" class="cuenta">
-            <button type="submit" class="invisible" >
-                <div class="nombre">Nombre</div>
-                <div class="valor">$ Valor</div>
-                <div class="fecha">Fecha</div>
-                </button>
-                <div class="boton" onclick="confirmarElim()">
-                    <a href="inicio.php" id="eliminar">Eliminar</a>
-                </div>
-            </form>
 
-        <form action="agregar.php" class="cuenta">
-            <button type="submit" class="invisible">
-                <div class="nombre">Nombre</div>
-                <div class="valor">$ Valor</div>
-                <div class="fecha">Fecha</div>
-                </button>
-                <div class="boton" onclick="confirmarElim()">
-                    <a href="inicio.php" id="eliminar">Eliminar</a>
-                </div>
-            </form>
+                
+            }else{
+                echo "El usuario '$nombre_usuario' no tiene cuentas.";
+            }
+        ?>
+
     </div>
     
     <script src="js/eliminar.js"></script>
