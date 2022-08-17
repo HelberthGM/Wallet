@@ -53,9 +53,24 @@
                         }
                         ?></div>
                     </button>
-                    <div class="boton" onclick="if(confirmarElim()){location.href='./modelo/elimCuenta.php';}">
-                        <a  id="eliminar" name="cuenta">Eliminar <?php echo $count?></a>
-                    </div>
+                    <form method="post">
+                        <div class="boton" type="submit" id="idcu" value="<?php echo $id_cuenta ?>" 
+                        onclick=
+                        "if(confirmarElim()){
+                            let idcu = this.getAttribute('value');
+                            document.getElementById('idc').value = idcu;
+                            console.log(document.getElementById('idc').value);
+                            
+                            }else{ let idcu = -1;}"
+                        > 
+                        <a  id="eliminar" name="cuenta">Eliminar</a>
+                        <input type="submit" id="idc" name="idcu"class=" invisible" value="" action="modelo/elimCuenta.php">
+                        <?php 
+                        //$_SESSION['id_cuenta'] = $_POST['idcu']
+
+                        ?>
+                        </div>
+                    </form>
                 </form>
                 <?php
                 $count += 1;
