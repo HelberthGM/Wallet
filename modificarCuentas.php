@@ -25,6 +25,8 @@
     <section>
         <h1>Informacion de la cuenta</h1>
         <form method="post">
+          
+        <div id="id_cuenta"><p> ID Cuenta:<input type="text" name="txtIDcuenta"  value="ejemplo" disabled></p></div>
         <div id="nombre"><p> Nombre de Cuenta:<input type="text" placeholder="Nombre de cuenta..." name="txtNomCuenta"  value="ejemplo" required></p></div>
         <div id="valor"><p> Valor de cuenta:<input type="number" placeholder="50000..." name="txtVlrCuenta" required></p></div>
         <div id="tipo">

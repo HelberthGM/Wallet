@@ -31,6 +31,7 @@
     </nav>
     <div class="cuentas">
         <?php 
+        $count = 0;
          if ($num>0) {
              while ($row = $resultado->fetch_assoc()) {
                  $id_cuenta = $row['id_cuenta'];
@@ -41,6 +42,7 @@
                  ?>
                  <form action="modificarCuentas.php" class="cuenta" method="get">
                     <button type="submit" class="invisible">
+                        <div class="id"><?php echo $id_cuenta; ?></div>
                         <div class="nombre"><?php echo $nombre; ?></div>
                         <div class="valor">$ <?php echo $valor; ?></div>
                         <div class="fecha"><?php 
@@ -51,12 +53,14 @@
                         }
                         ?></div>
                     </button>
-                    <div class="boton" onclick="confirmarElim()">
-                        <a href="inicio.php" id="eliminar">Eliminar</a>
+                    <div class="boton" onclick="if(confirmarElim()){location.href='./modelo/elimCuenta.php';}">
+                        <a  id="eliminar" name="cuenta">Eliminar <?php echo $count?></a>
                     </div>
                 </form>
                 <?php
+                $count += 1;
             }
+             $_SESSION['id_cuenta'] = $id_cuenta;
         }else{
             ?>
     <div></div>
